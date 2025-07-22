@@ -1,41 +1,73 @@
-portfolio/
-├── index.html
-├── styles.css
-└── projects/
-    └── cat-photo-app.html
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Zackry Minor | Web Developer</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <header>
-      <h1>Zackry Minor</h1>
-      <p>Web Developer | HTML • CSS • JS</p>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <title>Zackry Minor | Portfolio</title>
+  <style>
+    /* Dark theme background and text */
+    body {
+      background-color: #121212;
+      color: #e0e0e0;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      line-height: 1.6;
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    header, footer {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    a {
+      color: #bb86fc;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.2rem;
+      transition: color 0.3s ease;
+      display: inline-block;
+      margin: 0.5rem 0;
+    }
+    a:hover,
+    a:focus {
+      color: #3700b3;
+      outline: none;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    li {
+      margin: 1rem 0;
+    }
+    footer {
+      margin-top: auto;
+      font-size: 0.9rem;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Zackry Minor</h1>
+    <p>Web Developer | HTML • CSS • JS</p>
+  </header>
 
-    <section>
-      <h2>Projects</h2>
-      <ul>
-        <li><a href="projects/cat-photo-app.html" target="_blank">Cat Photo App</a></li>
-        <!-- Add more links to future projects here -->
-      </ul>
-    </section>
+  <section>
+    <h2>Projects</h2>
+    <ul>
+      <li><a href="cat-photo-app/" target="_blank" rel="noopener noreferrer">🐱 Cat Photo App</a></li>
+      <!-- Add more projects here -->
+    </ul>
+  </section>
 
-    <footer>
-      <p>© 2025 Zackry Minor</p>
-    </footer>
-  </body>
+  <footer>
+    <p>© 2025 Zackry Minor</p>
+  </footer>
+</body>
 </html>
-body {
-  font-family: Arial, sans-serif;
-  padding: 20px;
-  line-height: 1.6;
-  background-color: #f4f4f4;
-}
-header, footer {
-  text-align: center;
-}
-
