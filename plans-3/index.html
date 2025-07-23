@@ -1,1 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Business Pro Plan | Zackry Minor</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    :root {
+      --primary: #ff9800;
+      --background: #0d1117;
+      --card: #161b22;
+      --text: #e6edf3;
+      --muted: #8b949e;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--background);
+      color: var(--text);
+    }
+
+    header {
+      background-color: var(--card);
+      padding: 2rem;
+      text-align: center;
+      border-bottom: 1px solid #333;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      color: var(--primary);
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 1rem;
+      background-color: #1f242b;
+    }
+
+    nav a {
+      color: var(--text);
+      margin: 0.5rem 1rem;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--primary);
+    }
+
+    .hero {
+      text-align: center;
+      padding: 4rem 2rem;
+      background-color: #12181f;
+    }
+
+    .hero h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      padding: 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .card {
+      background-color: var(--card);
+      padding: 1.5rem;
+      border-radius: 8px;
+      border: 1px solid #2b2f36;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    .card h3 {
+      color: var(--primary);
+    }
+
+    .card ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .card ul li {
+      margin: 0.5rem 0;
+    }
+
+    .blog-preview {
+      padding: 2rem;
+      background-color: #0f141b;
+    }
+
+    .blog-preview h2 {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .posts {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .post {
+      background-color: #1c1f26;
+      padding: 1rem;
+      border-radius: 6px;
+      border: 1px solid #2e2e2e;
+    }
+
+    .post h4 {
+      margin: 0 0 0.5rem;
+    }
+
+    .newsletter {
+      padding: 2rem;
+      background-color: #12181f;
+      text-align: center;
+    }
+
+    .newsletter input[type="email"] {
+      padding: 0.7rem;
+      width: 250px;
+      border-radius: 5px;
+      border: none;
+      margin-right: 0.5rem;
+    }
+
+    .newsletter button {
+      padding: 0.7rem 1.2rem;
+      background-color: var(--primary);
+      color: #000;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: var(--muted);
+      padding: 1rem;
+      background-color: #1f242b;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .newsletter input {
+        width: 100%;
+        margin-bottom: 1rem;
+      }
+
+      .newsletter button {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Business Pro Plan</h1>
+    <p>Built for growth, engagement, and advanced features</p>
+  </header>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Portfolio</a>
+    <a href="#">Blog</a>
+    <a href="#">FAQ</a>
+    <a href="#">Team</a>
+    <a href="#">Contact</a>
+    <a href="#">Subscribe</a>
+    <a href="#">Support</a>
+  </nav>
+
+  <section class="hero">
+    <h2>Why Go Business Pro?</h2>
+    <p>This plan gives you everything: more pages, more flexibility, and custom design options to elevate your brand.</p>
+  </section>
+
+  <section class="features">
+    <div class="card">
+      <h3>✅ Up to 10 Pages</h3>
+      <ul>
+        <li>Fully designed custom pages</li>
+        <li>SEO optimized layout</li>
+        <li>Mobile-friendly & fast</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>✅ Blog or CMS Layout</h3>
+      <ul>
+        <li>Modern blog design</li>
+        <li>Easy content updates</li>
+        <li>Engage your audience</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>✅ Newsletter Signup</h3>
+      <ul>
+        <li>Collect leads</li>
+        <li>Grow your audience</li>
+        <li>Integrates with Mailchimp</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>✅ 3 Revisions Included</h3>
+      <ul>
+        <li>Iterate your vision</li>
+        <li>Make changes with confidence</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="blog-preview">
+    <h2>Sample Blog Posts</h2>
+    <div class="posts">
+      <div class="post">
+        <h4>🔎 How to Grow Your Business Online</h4>
+        <p>5 strategies every small business needs to succeed on the web.</p>
+      </div>
+      <div class="post">
+        <h4>🎨 Why Custom Branding Matters</h4>
+        <p>Branding isn’t just a logo—it’s your identity.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="newsletter">
+    <h2>Subscribe to Our Newsletter</h2>
+    <p>Get updates, tips, and exclusive content delivered to your inbox.</p>
+    <form>
+      <input type="email" placeholder="Enter your email" required />
+      <button type="submit">Subscribe</button>
+    </form>
+  </section>
+
+  <div class="footer">
+    © 2025 Zackry Minor. All rights reserved.
+  </div>
+</body>
+</html>
 
