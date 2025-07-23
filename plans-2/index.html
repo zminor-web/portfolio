@@ -2,10 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Professional Plan | Zackry Minor</title>
+  <title>Starter Plan | Zackry Minor</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
-    /* Reset and base */
     body {
       background-color: #121212;
       color: #e0e0e0;
@@ -59,31 +58,32 @@
       left: 0;
       color: #bb86fc;
     }
-    /* Contact form styling */
+    /* Simpler contact form styling to emphasize starter nature */
     form {
-      background-color: #272727;
-      padding: 20px;
-      border-radius: 8px;
-      max-width: 600px;
+      background-color: #1f1f1f;
+      padding: 15px;
+      border-radius: 6px;
+      max-width: 500px;
       width: 100%;
       text-align: left;
       margin-bottom: 2rem;
-      box-shadow: 0 0 10px #bb86fc50;
+      box-shadow: 0 0 5px #555;
+      font-size: 0.95rem;
     }
     label {
       display: block;
-      margin-bottom: 6px;
-      font-weight: bold;
-      color: #ccc;
+      margin-bottom: 5px;
+      font-weight: normal;
+      color: #aaa;
     }
     input, textarea {
       width: 100%;
-      padding: 10px;
-      margin-bottom: 15px;
+      padding: 8px;
+      margin-bottom: 12px;
       border: none;
-      border-radius: 4px;
+      border-radius: 3px;
       font-size: 1rem;
-      background-color: #1e1e1e;
+      background-color: #121212;
       color: #e0e0e0;
       resize: vertical;
     }
@@ -94,11 +94,11 @@
     button {
       background-color: #bb86fc;
       border: none;
-      padding: 12px 25px;
-      font-size: 1.1rem;
+      padding: 10px 20px;
+      font-size: 1rem;
       color: #121212;
       font-weight: bold;
-      border-radius: 5px;
+      border-radius: 4px;
       cursor: pointer;
       transition: background-color 0.3s ease;
     }
@@ -107,22 +107,20 @@
       color: #fff;
       outline: none;
     }
-    /* Google map container */
     .map-container {
-      max-width: 600px;
+      max-width: 500px;
       width: 100%;
-      height: 300px;
-      border-radius: 8px;
+      height: 250px;
+      border-radius: 6px;
       overflow: hidden;
-      box-shadow: 0 0 12px #bb86fc80;
+      box-shadow: 0 0 5px #555;
       margin-bottom: 2rem;
     }
-    /* Back link */
     .back-link {
       color: #bb86fc;
       font-weight: bold;
       text-decoration: none;
-      font-size: 1.1rem;
+      font-size: 1.05rem;
       margin-top: auto;
     }
     .back-link:hover,
@@ -144,41 +142,42 @@
         font-size: 2rem;
       }
       form {
-        padding: 15px;
+        padding: 12px;
       }
       .map-container {
-        height: 200px;
+        height: 180px;
       }
     }
   </style>
 </head>
 <body>
-  <h1>Professional Plan</h1>
-  <div class="price">$450</div>
-  <p>Perfect for service-based businesses that need a polished, multi-page website with essential features and mobile responsiveness. This plan is designed to take your online presence to the next level.</p>
+  <h1>Starter Plan</h1>
+  <div class="price">$200</div>
+  <p>This plan is perfect for local businesses just starting out online. It offers a solid, simple, one-page website with essential features to get your presence established quickly and affordably.</p>
 
   <ul class="features">
-    <li>Up to 5 pages</li>
-    <li>Contact form + Google Map integration</li>
-    <li>Mobile responsive design</li>
-    <li>2 revisions included</li>
+    <li>1-page responsive website</li>
+    <li>Contact form or Google Map (choose one)</li>
+    <li>Basic SEO setup</li>
+    <li>1 revision included</li>
   </ul>
 
-  <form action="#" method="post" aria-label="Contact form for Professional Plan demo">
-    <h2>Request a Quote or Ask a Question</h2>
+  <form action="#" method="post" aria-label="Contact form for Starter Plan demo">
+    <h2>Contact Us</h2>
     <label for="name">Name</label>
-    <input id="name" name="name" type="text" placeholder="Your full name" required />
+    <input id="name" name="name" type="text" placeholder="Your name" required />
 
     <label for="email">Email</label>
     <input id="email" name="email" type="email" placeholder="you@example.com" required />
 
     <label for="message">Message</label>
-    <textarea id="message" name="message" rows="4" placeholder="Tell us about your project..." required></textarea>
+    <textarea id="message" name="message" rows="3" placeholder="Your message here..." required></textarea>
 
-    <button type="submit">Send Message</button>
+    <button type="submit">Send</button>
   </form>
 
   <div class="map-container" aria-label="Google Map location example">
+    <!-- Simple embedded map showing placeholder location -->
     <iframe
       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.019572405193!2d-122.419415084681!3d37.77492977975956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085809c5b4b373d%3A0xa29c8a66621f8580!2sSan%20Francisco%2C%20CA!5e0!3m2!1sen!2sus!4v1690144201234!5m2!1sen!2sus"
       width="100%"
