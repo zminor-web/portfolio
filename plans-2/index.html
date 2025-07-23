@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 <head>
   <meta charset="UTF-8" />
-  <title>Starter Plan | Zackry Minor</title>
+  <title>Professional Plan | Zackry Minor</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
+    /* Base styles similar to your Starter Plan, but upgraded */
     body {
       background-color: #121212;
       color: #e0e0e0;
@@ -16,168 +17,199 @@
       align-items: center;
       min-height: 100vh;
       text-align: center;
-    }
-    h1, h2 {
-      color: #bb86fc;
-      margin-bottom: 0.5rem;
-    }
-    h3 {
-      margin-top: 0;
-      color: #bb86fc;
-    }
-    p {
-      max-width: 600px;
-      margin: 0 auto 1.5rem;
-      font-size: 1.1rem;
       line-height: 1.5;
-      color: #ccc;
     }
-    .price {
-      font-size: 2.5rem;
-      font-weight: bold;
+
+    h1 {
       color: #bb86fc;
-      margin-bottom: 1rem;
+      font-size: 2.8rem;
+      margin-bottom: 0.25rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
     }
-    ul.features {
+
+    h2 {
+      color: #ccc;
+      font-weight: 400;
+      margin-top: 0;
+      margin-bottom: 2rem;
+      font-size: 1.2rem;
+      max-width: 600px;
+    }
+
+    .price {
+      font-size: 3.5rem;
+      font-weight: 900;
+      color: #bb86fc;
+      margin: 0 0 2rem 0;
+      letter-spacing: 0.1em;
+      text-shadow: 0 0 10px #bb86fc88;
+    }
+
+    .features {
       list-style: none;
       padding: 0;
+      margin: 0 auto 3rem auto;
       max-width: 600px;
-      margin: 0 auto 2rem;
       text-align: left;
-      color: #a9a9a9;
+      font-size: 1.15rem;
+      color: #d0cde1;
     }
-    ul.features li {
-      margin-bottom: 0.8rem;
-      font-size: 1.1rem;
-      padding-left: 1.5rem;
+
+    .features li {
+      margin-bottom: 1rem;
+      padding-left: 2rem;
       position: relative;
+      font-weight: 600;
     }
-    ul.features li::before {
-      content: "✅";
+
+    .features li::before {
+      content: "✓";
       position: absolute;
       left: 0;
       color: #bb86fc;
+      font-weight: 900;
+      font-size: 1.2rem;
+      line-height: 1;
     }
-    /* Simpler contact form styling to emphasize starter nature */
+
+    /* Form Styling: bigger, cleaner, modern */
     form {
-      background-color: #1f1f1f;
-      padding: 15px;
-      border-radius: 6px;
-      max-width: 500px;
+      background: #1f1b2e;
+      border-radius: 12px;
+      padding: 2rem;
+      max-width: 600px;
       width: 100%;
+      box-shadow: 0 0 20px #bb86fcaa;
       text-align: left;
-      margin-bottom: 2rem;
-      box-shadow: 0 0 5px #555;
-      font-size: 0.95rem;
+      margin-bottom: 3rem;
     }
+
     label {
+      color: #cfc9e5;
+      font-weight: 600;
       display: block;
-      margin-bottom: 5px;
-      font-weight: normal;
-      color: #aaa;
+      margin-bottom: 0.6rem;
+      font-size: 1.05rem;
     }
+
     input, textarea {
       width: 100%;
-      padding: 8px;
-      margin-bottom: 12px;
+      padding: 12px 15px;
+      margin-bottom: 1.25rem;
+      border-radius: 8px;
       border: none;
-      border-radius: 3px;
-      font-size: 1rem;
-      background-color: #121212;
-      color: #e0e0e0;
+      font-size: 1.05rem;
+      background-color: #302b43;
+      color: #e0dff4;
       resize: vertical;
-    }
-    input:focus, textarea:focus {
-      outline: 2px solid #bb86fc;
-      background-color: #292929;
-    }
-    button {
-      background-color: #bb86fc;
-      border: none;
-      padding: 10px 20px;
-      font-size: 1rem;
-      color: #121212;
-      font-weight: bold;
-      border-radius: 4px;
-      cursor: pointer;
       transition: background-color 0.3s ease;
     }
-    button:hover, button:focus {
-      background-color: #3700b3;
-      color: #fff;
+
+    input:focus, textarea:focus {
+      background-color: #3a3550;
       outline: none;
+      box-shadow: 0 0 10px #bb86fccc;
     }
-    .map-container {
-      max-width: 500px;
+
+    button {
+      background-color: #bb86fc;
+      color: #1b122e;
+      font-weight: 700;
+      padding: 15px 30px;
+      font-size: 1.15rem;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      box-shadow: 0 4px 10px #bb86fc99;
       width: 100%;
-      height: 250px;
-      border-radius: 6px;
+      max-width: 200px;
+      margin-top: 0.5rem;
+      display: block;
+    }
+
+    button:hover, button:focus {
+      background-color: #7a46cc;
+      color: #f5f1ff;
+      outline: none;
+      box-shadow: 0 0 20px #7a46cccc;
+    }
+
+    /* Map container: polished with shadow and rounded corners */
+    .map-container {
+      max-width: 600px;
+      width: 100%;
+      height: 350px;
+      border-radius: 16px;
       overflow: hidden;
-      box-shadow: 0 0 5px #555;
-      margin-bottom: 2rem;
+      margin-bottom: 3rem;
+      box-shadow: 0 0 25px #bb86fcaa;
+      border: 2px solid #bb86fc77;
     }
+
+    /* Back to portfolio link */
     .back-link {
+      font-weight: 700;
       color: #bb86fc;
-      font-weight: bold;
       text-decoration: none;
-      font-size: 1.05rem;
-      margin-top: auto;
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+      transition: color 0.3s ease;
     }
-    .back-link:hover,
-    .back-link:focus {
-      color: #3700b3;
+
+    .back-link:hover, .back-link:focus {
+      color: #7a46cc;
       text-decoration: underline;
       outline: none;
     }
 
-    /* Responsive */
+    /* Responsive tweaks */
     @media (max-width: 640px) {
       body {
         padding: 1rem;
       }
-      ul.features {
-        font-size: 1rem;
+      h1 {
+        font-size: 2.3rem;
       }
       .price {
-        font-size: 2rem;
+        font-size: 2.8rem;
       }
       form {
-        padding: 12px;
+        padding: 1.5rem;
       }
       .map-container {
-        height: 180px;
+        height: 250px;
       }
     }
   </style>
 </head>
 <body>
-  <h1>Starter Plan</h1>
-  <div class="price">$200</div>
-  <p>This plan is perfect for local businesses just starting out online. It offers a solid, simple, one-page website with essential features to get your presence established quickly and affordably.</p>
+  <h1>Professional Plan</h1>
+  <h2>Upgrade your business with a multi-page, feature-rich website</h2>
+  <div class="price">$450</div>
 
-  <ul class="features">
-    <li>1-page responsive website</li>
-    <li>Contact form or Google Map (choose one)</li>
-    <li>Basic SEO setup</li>
-    <li>1 revision included</li>
+  <ul class="features" aria-label="Professional Plan Features">
+    <li>Up to 5 pages for showcasing services, team, and portfolio</li>
+    <li>Integrated contact form <strong>plus</strong> Google Map</li>
+    <li>Mobile responsive design ensuring a smooth experience on any device</li>
+    <li>2 revisions included for perfecting your site</li>
   </ul>
 
-  <form action="#" method="post" aria-label="Contact form for Starter Plan demo">
-    <h2>Contact Us</h2>
+  <form action="#" method="post" aria-label="Contact form for Professional Plan demo">
     <label for="name">Name</label>
-    <input id="name" name="name" type="text" placeholder="Your name" required />
+    <input id="name" name="name" type="text" placeholder="Your full name" required />
 
     <label for="email">Email</label>
     <input id="email" name="email" type="email" placeholder="you@example.com" required />
 
     <label for="message">Message</label>
-    <textarea id="message" name="message" rows="3" placeholder="Your message here..." required></textarea>
+    <textarea id="message" name="message" rows="5" placeholder="Tell us about your project..." required></textarea>
 
-    <button type="submit">Send</button>
+    <button type="submit">Send Message</button>
   </form>
 
-  <div class="map-container" aria-label="Google Map location example">
-    <!-- Simple embedded map showing placeholder location -->
+  <div class="map-container" aria-label="Google Map showing business location">
     <iframe
       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.019572405193!2d-122.419415084681!3d37.77492977975956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085809c5b4b373d%3A0xa29c8a66621f8580!2sSan%20Francisco%2C%20CA!5e0!3m2!1sen!2sus!4v1690144201234!5m2!1sen!2sus"
       width="100%"
