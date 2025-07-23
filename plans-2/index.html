@@ -1,432 +1,456 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Professional Plan Demo | Cozy Local Store</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Professional Plan Demo | Cozy Local Store</title>
   <style>
     /* Reset & basics */
-    * {
+    *, *::before, *::after {
       box-sizing: border-box;
     }
     body {
       margin: 0; padding: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #f3f0f8;
-      color: #3a2c29;
+      font-family: 'Montserrat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f7f9fc;
+      color: #2c3e50;
       line-height: 1.6;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
     }
 
-    /* Header */
-    header {
-      background: linear-gradient(135deg, #6c4fa0, #8e7cc3);
-      color: white;
-      padding: 2.5rem 1rem 3.5rem;
-      text-align: center;
-      border-bottom-left-radius: 40px;
-      border-bottom-right-radius: 40px;
-      box-shadow: 0 5px 15px rgba(108, 79, 160, 0.6);
-      position: relative;
-      overflow: visible;
-    }
-    header h1 {
-      margin: 0 0 0.7rem;
-      font-size: 3rem;
-      font-weight: 800;
-      letter-spacing: 3px;
-      font-family: 'Georgia', serif;
-      text-shadow: 0 2px 8px rgba(0,0,0,0.3);
-    }
-    header p {
-      font-style: italic;
-      font-weight: 600;
-      font-size: 1.25rem;
-      max-width: 540px;
-      margin: 0 auto;
-      opacity: 0.9;
-      text-shadow: 0 1px 3px rgba(0,0,0,0.2);
-    }
+    /* Sticky Navigation */
     nav {
-      margin-top: 1.5rem;
+      position: sticky;
+      top: 0;
+      background: white;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
       display: flex;
       justify-content: center;
       gap: 2rem;
+      padding: 1rem 0;
+      z-index: 1000;
+      font-weight: 600;
+      font-size: 1rem;
     }
     nav a {
-      color: #e3d9f2;
       text-decoration: none;
-      font-weight: 700;
-      font-size: 1.15rem;
+      color: #34495e;
       padding: 0.5rem 1rem;
-      border-radius: 25px;
-      background: rgba(255 255 255 / 0.1);
-      box-shadow: 0 0 8px rgba(255 255 255 / 0.1);
-      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      border-radius: 6px;
+      transition: background-color 0.3s ease, color 0.3s ease;
     }
     nav a:hover,
     nav a:focus {
-      background-color: #d6c5f9;
-      color: #4a2c89;
-      box-shadow: 0 0 20px #a084de;
+      background-color: #2980b9;
+      color: white;
       outline: none;
     }
 
-    /* Hero banner */
-    .hero {
-      background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1350&q=80') center center/cover no-repeat;
-      color: white;
-      padding: 7rem 1rem 6rem;
+    /* Header / Hero */
+    header {
       text-align: center;
-      border-radius: 0 0 40px 40px;
-      box-shadow: inset 0 0 0 1000px rgba(108, 79, 160, 0.6);
-      margin: -3.5rem 1rem 4rem;
-      max-width: 960px;
-      margin-left: auto;
-      margin-right: auto;
-      font-family: 'Georgia', serif;
+      padding: 5rem 1rem 4rem;
+      background: linear-gradient(135deg, #2980b9 0%, #6dd5fa 100%);
+      color: white;
+      box-shadow: inset 0 0 60px rgba(0,0,0,0.2);
     }
-    .hero h2 {
+    header h1 {
       font-size: 3rem;
       margin-bottom: 0.3rem;
-      text-shadow: 0 2px 6px rgba(0,0,0,0.7);
+      letter-spacing: 2px;
+      font-weight: 700;
     }
-    .hero p {
+    header p {
       font-size: 1.3rem;
-      max-width: 680px;
+      font-weight: 500;
+      max-width: 700px;
       margin: 0 auto;
-      font-weight: 600;
-      text-shadow: 0 1px 4px rgba(0,0,0,0.6);
+      opacity: 0.9;
+      line-height: 1.4;
     }
 
-    /* Main content */
+    /* Container */
     main {
-      flex-grow: 1;
-      max-width: 960px;
-      margin: 0 auto 3rem;
+      max-width: 1000px;
+      margin: 2rem auto 4rem;
       padding: 0 1rem;
+      flex-grow: 1;
     }
 
-    /* Multi-page simulation using sections & nav */
-    section {
-      margin-bottom: 4rem;
-    }
+    /* Section Titles */
     section h2 {
-      font-size: 2.4rem;
-      margin-bottom: 1.8rem;
-      color: #6b4fa0;
-      font-family: 'Georgia', serif;
-      border-bottom: 3px solid #9a7be3;
-      padding-bottom: 0.3rem;
-      max-width: max-content;
-      margin-left: auto;
-      margin-right: auto;
+      text-align: center;
+      font-size: 2.2rem;
+      color: #34495e;
+      margin-bottom: 1.5rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+    }
+
+    /* Services Section */
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+    .service-card {
+      background: white;
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 4px 16px rgba(41,128,185,0.15);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 24px rgba(41,128,185,0.3);
+    }
+    .service-icon {
+      font-size: 3.5rem;
+      color: #2980b9;
+      margin-bottom: 1rem;
+    }
+    .service-title {
+      font-weight: 700;
+      font-size: 1.4rem;
+      margin-bottom: 0.7rem;
+      color: #2c3e50;
+    }
+    .service-desc {
+      font-size: 1rem;
+      color: #566573;
+      line-height: 1.4;
     }
 
     /* Products Section */
-    #products .products {
+    #products .products-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
-      gap: 2.5rem;
+      grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+      gap: 2rem;
     }
     .product-card {
-      background: #fff7fc;
-      border-radius: 25px;
-      padding: 2rem 1.5rem;
-      box-shadow: 0 10px 20px rgba(155, 123, 224, 0.2);
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 1.5rem;
       text-align: center;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      transition: transform 0.3s ease;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
     }
     .product-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 14px 28px rgba(155, 123, 224, 0.35);
+      transform: translateY(-6px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
     }
     .product-card img {
       max-width: 100%;
-      height: auto;
-      border-radius: 20px;
-      margin-bottom: 1.3rem;
-      box-shadow: 0 5px 15px rgba(107, 79, 160, 0.25);
-      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 1rem;
       aspect-ratio: 4 / 3;
+      object-fit: cover;
+      box-shadow: 0 4px 8px rgba(41,128,185,0.2);
     }
     .product-card h3 {
-      margin: 0.5rem 0 0.4rem;
-      font-size: 1.5rem;
-      color: #6b4fa0;
+      color: #2980b9;
+      margin: 0.3rem 0 0.6rem;
+      font-size: 1.3rem;
       font-weight: 700;
     }
     .product-card p {
-      margin: 0 0 1.2rem;
-      color: #5a4752;
-      font-size: 1.1rem;
-      font-style: italic;
       flex-grow: 1;
+      color: #566573;
+      font-style: italic;
+      margin-bottom: 1rem;
     }
-    .price {
-      font-weight: 700;
-      font-size: 1.3rem;
-      color: #7a549d;
-      margin-bottom: 0.5rem;
-    }
-    .buy-btn {
-      background: #7a549d;
-      color: white;
-      border: none;
-      border-radius: 25px;
-      padding: 0.85rem 0;
+    .product-price {
       font-weight: 700;
       font-size: 1.2rem;
+      color: #21618c;
+      margin-bottom: 1rem;
+    }
+    .buy-btn {
+      background-color: #2980b9;
+      border: none;
+      color: white;
+      padding: 0.75rem 0;
+      font-weight: 700;
+      font-size: 1.1rem;
+      border-radius: 25px;
       cursor: pointer;
       transition: background-color 0.3s ease;
-      width: 100%;
     }
     .buy-btn:hover {
-      background-color: #613b84;
+      background-color: #1b4f72;
     }
 
-    /* Contact section with form + map side by side */
+    /* Contact Section */
     #contact {
       display: flex;
-      flex-wrap: wrap;
-      gap: 2.5rem;
-      background: #ece7f7;
-      padding: 2.5rem 3rem;
-      border-radius: 40px;
-      box-shadow: 0 10px 25px rgba(155, 123, 224, 0.25);
-      justify-content: center;
-      max-width: 900px;
-      margin: 0 auto 4rem;
-    }
-    #contact > div {
-      flex: 1 1 320px;
-      min-width: 280px;
-      max-width: 440px;
+      gap: 3rem;
       background: white;
-      padding: 2rem 2.5rem;
-      border-radius: 25px;
-      box-shadow: 0 8px 18px rgba(107, 79, 160, 0.15);
+      border-radius: 15px;
+      padding: 3rem 2rem;
+      box-shadow: 0 6px 24px rgba(41,128,185,0.15);
+      flex-wrap: wrap;
+      justify-content: center;
     }
-    #contact h2 {
-      color: #6b4fa0;
-      font-family: 'Georgia', serif;
-      font-size: 2rem;
-      margin-bottom: 1.6rem;
-      text-align: center;
-    }
-    form {
+    #contact form {
+      flex: 1 1 320px;
+      max-width: 400px;
       display: flex;
       flex-direction: column;
-      gap: 1.3rem;
+      gap: 1.2rem;
+    }
+    #contact h2 {
+      flex-basis: 100%;
+      text-align: center;
+      margin-bottom: 2rem;
+      color: #2980b9;
     }
     label {
       font-weight: 600;
-      font-size: 1.1rem;
-      margin-bottom: 0.4rem;
-      color: #5a4752;
+      font-size: 1rem;
+      color: #34495e;
     }
     input, textarea {
-      padding: 1rem;
-      font-size: 1.1rem;
-      border-radius: 15px;
-      border: 2px solid #a997ca;
-      resize: none;
+      padding: 0.8rem;
+      font-size: 1rem;
+      border-radius: 8px;
+      border: 2px solid #d6e6f5;
       font-family: inherit;
       transition: border-color 0.3s ease;
+      resize: vertical;
     }
     input:focus, textarea:focus {
+      border-color: #2980b9;
       outline: none;
-      border-color: #6b4fa0;
-      background: #f6f2fc;
+      background: #f0f7ff;
     }
-    button {
-      background-color: #6b4fa0;
+    button[type="submit"] {
+      background-color: #2980b9;
       color: white;
       border: none;
-      padding: 1.1rem;
+      padding: 1rem;
       border-radius: 30px;
-      font-size: 1.3rem;
       font-weight: 700;
+      font-size: 1.1rem;
       cursor: pointer;
       transition: background-color 0.3s ease;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin-top: 0.8rem;
     }
-    button:hover {
-      background-color: #594e85;
+    button[type="submit"]:hover {
+      background-color: #1b4f72;
     }
-    /* Map container */
-    #map {
+
+    /* Google Map */
+    .map-container {
+      flex: 1 1 320px;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 6px 24px rgba(41,128,185,0.15);
+      min-height: 320px;
+      max-width: 500px;
+    }
+    iframe {
+      border: 0;
       width: 100%;
-      height: 320px;
-      border-radius: 20px;
-      border: 2px solid #a997ca;
-      box-shadow: 0 4px 15px rgba(107, 79, 160, 0.2);
+      height: 100%;
+    }
+
+    /* Testimonials */
+    #testimonials {
+      background: white;
+      padding: 3rem 2rem;
+      border-radius: 15px;
+      box-shadow: 0 6px 24px rgba(41,128,185,0.15);
+      max-width: 900px;
+      margin: 3rem auto;
+    }
+    #testimonials h2 {
+      margin-bottom: 2rem;
+      color: #2980b9;
+      font-weight: 700;
+    }
+    .testimonial-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+    }
+    .testimonial {
+      background: #f0f7ff;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(41,128,185,0.1);
+      font-style: italic;
+      color: #34495e;
+      position: relative;
+      min-height: 140px;
+    }
+    .testimonial::before {
+      content: "“";
+      font-size: 4rem;
+      color: #2980b9;
+      position: absolute;
+      top: -20px;
+      left: 15px;
+      font-family: serif;
+      opacity: 0.15;
+    }
+    .testimonial p {
+      margin: 0;
+    }
+    .testimonial cite {
+      display: block;
+      margin-top: 1rem;
+      font-style: normal;
+      font-weight: 600;
+      color: #21618c;
     }
 
     /* Footer */
     footer {
-      background: linear-gradient(135deg, #6c4fa0, #8e7cc3);
-      text-align: center;
-      padding: 1.8rem;
+      background: #2980b9;
       color: white;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      text-align: center;
+      padding: 1.5rem 1rem;
       font-weight: 600;
-      font-size: 1rem;
+      font-size: 0.95rem;
       box-shadow: inset 0 3px 6px rgba(0,0,0,0.15);
       margin-top: auto;
     }
 
-    /* Responsive tweaks */
-    @media (max-width: 840px) {
-      nav {
-        flex-wrap: wrap;
-        gap: 1rem;
-      }
-      nav a {
-        flex-grow: 1;
-        text-align: center;
-        margin: 0.5rem 0;
-      }
+    /* Responsive */
+    @media (max-width: 768px) {
       #contact {
         flex-direction: column;
         padding: 2rem 1rem;
       }
-      #contact > div {
+      .map-container {
         max-width: 100%;
+        min-height: 280px;
       }
-    }
-    @media (max-width: 480px) {
-      header h1 {
-        font-size: 2.2rem;
-      }
-      header p {
-        font-size: 1rem;
-        max-width: 300px;
-      }
-      nav a {
-        font-size: 1rem;
-      }
-      .hero h2 {
-        font-size: 2rem;
-      }
-      .hero p {
-        font-size: 1.1rem;
-      }
-      #products .products {
-        grid-template-columns: 1fr;
-        gap: 1.8rem;
-      }
-      .product-card h3 {
-        font-size: 1.3rem;
-      }
-      .price {
-        font-size: 1.1rem;
-      }
-      .buy-btn {
-        font-size: 1rem;
-      }
-      #contact {
-        padding: 1.8rem 1rem;
-      }
-      #contact h2 {
-        font-size: 1.6rem;
-      }
-      button {
-        font-size: 1.1rem;
-        padding: 1rem;
+      main {
+        margin: 1.5rem auto 3rem;
       }
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>Cozy Local Store</h1>
-    <p>Your friendly neighborhood shop — fresh, local, and made with love.</p>
-    <nav>
-      <a href="#products">Our Favorites</a>
-      <a href="#contact">Get in Touch</a>
-    </nav>
+  <nav aria-label="Primary navigation">
+    <a href="#hero">Home</a>
+    <a href="#services">Services</a>
+    <a href="#products">Products</a>
+    <a href="#contact">Contact</a>
+    <a href="#testimonials">Testimonials</a>
+  </nav>
+
+  <header id="hero" role="banner">
+    <h1>Cozy Local Store - Professional Plan</h1>
+    <p>Your upgraded, multi-page website for serious business growth and customer engagement.</p>
   </header>
 
   <main>
 
-    <section class="hero" aria-label="Welcome Banner">
-      <h2>Welcome to Your Professional Online Store</h2>
-      <p>Multiple pages to showcase products, customer engagement, and your location — all mobile responsive.</p>
+    <section id="services" aria-labelledby="services-title">
+      <h2 id="services-title">Our Professional Services</h2>
+      <div class="services">
+        <article class="service-card" tabindex="0">
+          <div class="service-icon" aria-hidden="true">📄</div>
+          <h3 class="service-title">Up to 5 Pages</h3>
+          <p class="service-desc">Expand your website with multiple pages: Home, About, Products, Blog, and Contact.</p>
+        </article>
+        <article class="service-card" tabindex="0">
+          <div class="service-icon" aria-hidden="true">📧</div>
+          <h3 class="service-title">Contact Form + Google Map</h3>
+          <p class="service-desc">Seamless communication with a user-friendly contact form alongside an embedded Google Map for easy location finding.</p>
+        </article>
+        <article class="service-card" tabindex="0">
+          <div class="service-icon" aria-hidden="true">📱</div>
+          <h3 class="service-title">Mobile Responsive</h3>
+          <p class="service-desc">Beautifully optimized for all screen sizes — smartphones, tablets, and desktops.</p>
+        </article>
+        <article class="service-card" tabindex="0">
+          <div class="service-icon" aria-hidden="true">🔄</div>
+          <h3 class="service-title">2 Revisions Included</h3>
+          <p class="service-desc">Your satisfaction matters — we include two rounds of revisions to perfect your site.</p>
+        </article>
+      </div>
     </section>
 
-    <section id="products" aria-label="Product Listings">
-      <h2>Our Featured Products</h2>
-      <div class="products">
+    <section id="products" aria-labelledby="products-title">
+      <h2 id="products-title">Featured Products</h2>
+      <div class="products-grid">
         <article class="product-card" tabindex="0">
-          <img src="https://plus.unsplash.com/premium_photo-1723478487400-273b4dde66d4?q=80&w=738&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Jar of Organic Honey" />
+          <img src="https://plus.unsplash.com/premium_photo-1723478487400-273b4dde66d4?q=80&w=738&auto=format&fit=crop&ixlib=rb-4.1.0" alt="Jar of Organic Honey" />
           <h3>Sweet Organic Honey</h3>
           <p>Locally sourced and bursting with natural goodness. Perfect on toast or in tea!</p>
-          <div class="price">$12.99</div>
+          <div class="product-price">$12.99</div>
           <button class="buy-btn" aria-label="Buy Sweet Organic Honey for $12.99">Buy Now</button>
         </article>
         <article class="product-card" tabindex="0">
-          <img src="https://images.unsplash.com/photo-1652233172336-6efc037a3766?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Handmade Soap Bar" />
+          <img src="https://images.unsplash.com/photo-1652233172336-6efc037a3766?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0" alt="Handmade Soap Bar" />
           <h3>Gentle Handmade Soap</h3>
           <p>Soft scents and skin-friendly ingredients, perfect for daily use and gifts.</p>
-          <div class="price">$6.50</div>
+          <div class="product-price">$6.50</div>
           <button class="buy-btn" aria-label="Buy Gentle Handmade Soap for $6.50">Buy Now</button>
         </article>
         <article class="product-card" tabindex="0">
-          <img src="https://plus.unsplash.com/premium_photo-1664640733898-d5c3f71f44e1?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Freshly Baked Bread" />
+          <img src="https://plus.unsplash.com/premium_photo-1664640733898-d5c3f71f44e1?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0" alt="Freshly Baked Bread" />
           <h3>Warm Fresh Bread</h3>
           <p>Baked with love daily, straight from our oven to your table. Enjoy the aroma!</p>
-          <div class="price">$4.75</div>
+          <div class="product-price">$4.75</div>
           <button class="buy-btn" aria-label="Buy Warm Fresh Bread for $4.75">Buy Now</button>
         </article>
       </div>
     </section>
 
-    <section id="about" aria-label="About Our Store">
-      <h2>About Us</h2>
-      <p style="max-width:700px; margin: 0 auto; font-size:1.15rem; color: #4a3c3a; line-height:1.7;">
-        Cozy Local Store started as a small family business passionate about providing fresh, local goods. Our Professional Plan website helps you tell your story beautifully with multiple pages for services, products, testimonials, and more.
-      </p>
+    <section id="contact" aria-labelledby="contact-title">
+      <h2 id="contact-title">Get In Touch</h2>
+      <form aria-label="Contact form">
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" placeholder="Your name" required />
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" placeholder="Your email" required />
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+      <div class="map-container" aria-label="Google Map showing store location">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.0192688580883!2d-122.42065828468157!3d37.77851997975801!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085808f0a3d66c3%3A0x1f9b5a5ca1121f4a!2sCozy%20Local%20Store!5e0!3m2!1sen!2sus!4v1690151512345!5m2!1sen!2sus"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Cozy Local Store Location"
+        ></iframe>
+      </div>
     </section>
 
-    <section id="contact" aria-label="Contact and Location">
-      <div>
-        <h2>Contact Us</h2>
-        <form>
-          <label for="name">Your Name</label>
-          <input id="name" type="text" placeholder="Enter your name" required />
-          
-          <label for="email">Your Email</label>
-          <input id="email" type="email" placeholder="Enter your email" required />
-          
-          <label for="message">Your Message</label>
-          <textarea id="message" rows="5" placeholder="Write your message here..."></textarea>
-          
-          <button type="submit">Send Message</button>
-        </form>
-      </div>
-      <div>
-        <h2>Find Us</h2>
-        <div id="map" role="region" aria-label="Google map showing store location">
-          <!-- Google Maps iframe embed -->
-          <iframe
-            title="Cozy Local Store Location"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.364588028614!2d85.31522291505307!3d27.712775182789675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb190c7c4a592b%3A0x9d2bde5bb94f99b0!2sPatan%20Durbar%20Square!5e0!3m2!1sen!2snp!4v1686096615994!5m2!1sen!2snp"
-            width="100%"
-            height="320"
-            style="border:0;"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
-        </div>
+    <section id="testimonials" aria-labelledby="testimonials-title">
+      <h2 id="testimonials-title">What Our Clients Say</h2>
+      <div class="testimonial-list">
+        <blockquote class="testimonial" tabindex="0">
+          <p>"The professional plan completely transformed our online presence. The multi-page layout and integrated map make it so easy for customers to find us."</p>
+          <cite>— Sarah W., Small Business Owner</cite>
+        </blockquote>
+        <blockquote class="testimonial" tabindex="0">
+          <p>"Highly recommend! The responsive design looks great on all my devices and the contact form works perfectly."</p>
+          <cite>— James L., Artisan Soap Maker</cite>
+        </blockquote>
+        <blockquote class="testimonial" tabindex="0">
+          <p>"Two rounds of revisions ensured everything was exactly how I wanted it. Great customer service and design."</p>
+          <cite>— Priya K., Bakery Owner</cite>
+        </blockquote>
       </div>
     </section>
 
@@ -434,17 +458,6 @@
 
   <footer>
     &copy; 2025 Cozy Local Store. All rights reserved.
-    <div class="social-icons" role="navigation" aria-label="Social media links" style="margin-top:1rem; display:flex; justify-content:center; gap:1.8rem;">
-      <a href="#" aria-label="Facebook" style="color:white; font-size:1.8rem;">
-        <svg fill="currentColor" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M22 12a10 10 0 10-11.5 9.85v-6.96h-2.42v-2.9h2.42v-2.22c0-2.4 1.43-3.73 3.63-3.73 1.05 0 2.15.18 2.15.18v2.37h-1.21c-1.2 0-1.57.74-1.57 1.5v1.9h2.67l-.43 2.9h-2.24v6.96A10 10 0 0022 12z"/></svg>
-      </a>
-      <a href="#" aria-label="Twitter" style="color:white; font-size:1.8rem;">
-        <svg fill="currentColor" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M23 3a10.9 10.9 0 01-3.14.85 5.48 5.48 0 002.4-3.03 10.97 10.97 0 01-3.47 1.33 5.47 5.47 0 00-9.32 4.99A15.54 15.54 0 013 4.84a5.46 5.46 0 001.69 7.29 5.36 5.36 0 01-2.48-.69v.07a5.47 5.47 0 004.39 5.37 5.48 5.48 0 01-2.46.09 5.47 5.47 0 005.1 3.8A10.97 10.97 0 013 19.54a15.45 15.45 0 008.39 2.46c10.06 0 15.57-8.34 15.57-15.57 0-.24 0-.48-.02-.72A11.04 11.04 0 0023 3z"/></svg>
-      </a>
-      <a href="#" aria-label="Instagram" style="color:white; font-size:1.8rem;">
-        <svg fill="currentColor" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 2A3.75 3.75 0 004 7.75v8.5A3.75 3.75 0 007.75 20h8.5a3.75 3.75 0 003.75-3.75v-8.5A3.75 3.75 0 0016.25 4h-8.5zM12 7a5 5 0 110 10 5 5 0 010-10zm0 2a3 3 0 100 6 3 3 0 000-6zm4.75-3.5a1.25 1.25 0 110 2.5 1.25 1.25 0 010-2.5z"/></svg>
-      </a>
-    </div>
   </footer>
 
 </body>
