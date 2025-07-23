@@ -1,25 +1,14 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-<html lang="en" >
 <head>
   <meta charset="UTF-8" />
   <title>Zackry Minor | Portfolio</title>
-  <title>Starter Plan Demo | Cozy Local Store</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
-    /* Reset & basics */
-    * {
-      box-sizing: border-box;
-    }
     body {
       background-color: #121212;
       color: #e0e0e0;
       font-family: Arial, sans-serif;
       padding: 20px;
-      margin: 0; padding: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #fff8f0;
-      color: #5a3e36;
       line-height: 1.6;
       margin: 0;
       min-height: 100vh;
@@ -30,48 +19,14 @@
       text-align: center;
     }
     header, footer {
-
-    /* Header */
-    header {
-      background-color: #f28c8c;
-      color: white;
-      padding: 2rem 1rem 3rem;
       text-align: center;
       margin-bottom: 2rem;
-      border-bottom-left-radius: 30px;
-      border-bottom-right-radius: 30px;
-      box-shadow: 0 4px 8px rgba(242, 140, 140, 0.4);
-      position: relative;
-      overflow: visible;
     }
     a {
       color: #bb86fc;
       text-decoration: none;
       font-weight: bold;
-    header h1 {
-      margin: 0 0 0.5rem;
-      font-size: 2.8rem;
-      font-weight: 700;
-      font-family: 'Comic Sans MS', cursive, sans-serif;
-      letter-spacing: 2px;
-    }
-    header p {
-      font-style: italic;
-      font-weight: 600;
       font-size: 1.2rem;
-      opacity: 0.9;
-      max-width: 480px;
-      margin: 0 auto;
-    }
-    nav {
-      margin-top: 1rem;
-    }
-    nav a {
-      color: #ffe5e5;
-      text-decoration: none;
-      margin: 0 1rem;
-      font-weight: 600;
-      font-size: 1.1rem;
       transition: color 0.3s ease;
       display: inline-block;
       margin: 0.5rem 0;
@@ -80,303 +35,87 @@
     a:focus {
       color: #3700b3;
       outline: none;
-    nav a:hover {
-      color: #fff0f0;
       text-decoration: underline;
     }
     ul {
       list-style: none;
       padding: 0;
       margin: 0;
-
-    /* Hero banner */
-    .hero {
-      background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1350&q=80') center center/cover no-repeat;
-      color: white;
-      padding: 6rem 1rem 5rem;
-      text-align: center;
-      border-radius: 0 0 30px 30px;
-      box-shadow: inset 0 0 0 1000px rgba(242, 140, 140, 0.55);
-      margin: -3rem 1rem 3rem;
-      max-width: 900px;
-      margin-left: auto;
-      margin-right: auto;
     }
     li {
       margin: 1rem 0;
-    .hero h2 {
-      font-size: 2.8rem;
-      margin-bottom: 0.3rem;
-      text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+    }
+    .plans {
+      margin-top: 3rem;
+      max-width: 600px;
+      width: 100%;
+      background-color: #1e1e1e;
+      padding: 20px;
+      border-radius: 8px;
+      text-align: left;
+    }
+    .plan {
+      border: 1px solid #444;
+      border-radius: 6px;
+      padding: 20px;
+      margin-bottom: 1.5rem;
+      background-color: #272727;
+    }
+    .plan h3 {
+      margin-top: 0;
+      color: #bb86fc;
+    }
+    .plan h3 a {
+      color: #bb86fc;
+      text-decoration: none;
+    }
+    .plan h3 a:hover,
+    .plan h3 a:focus {
+      color: #3700b3;
+      text-decoration: underline;
+    }
+    .plan p {
+      margin: 0.5rem 0 1rem;
+      font-weight: bold;
+      font-size: 1.1rem;
+      color: #ccc;
+    }
+    .plan ul {
+      list-style: none;
+      padding-left: 1.2rem;
+      margin: 0;
+      color: #a9a9a9;
+    }
+    .plan ul li {
+      margin-bottom: 0.5rem;
     }
     footer {
       margin-top: auto;
       font-size: 0.9rem;
       color: #888;
-    .hero p {
-      font-size: 1.2rem;
-      max-width: 600px;
-      margin: 0 auto;
-      font-weight: 500;
-      text-shadow: 0 1px 3px rgba(0,0,0,0.6);
-    }
-
-    /* Plans Section Styles */
-    .plans {
-      max-width: 1000px;
-      margin: 3rem auto;
-    /* Main content */
-    main {
-      flex-grow: 1;
-      max-width: 900px;
-      margin: 0 auto 3rem;
-      padding: 0 1rem;
-    }
-    .plan-card {
-      background-color: #1e1e1e;
-      padding: 1.5rem;
-      border-radius: 12px;
-      border: 1px solid #333;
-      margin-bottom: 2rem;
-    section#products {
-      margin-bottom: 4rem;
-    }
-    .plan-card h3 {
-      font-size: 1.5rem;
-      margin-bottom: 0.5rem;
-      color: #bb86fc;
-    section#products h2 {
-      font-size: 2rem;
-      margin-bottom: 1.5rem;
-      text-align: center;
-      color: #b94747;
-      font-family: 'Comic Sans MS', cursive, sans-serif;
-    }
-    .products {
-      display: grid;
-      grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
-      gap: 2.5rem;
-    }
-    .product-card {
-      background: #fff1e6;
-      border-radius: 20px;
-      padding: 1.5rem 1.2rem;
-      box-shadow: 0 8px 15px rgba(242, 140, 140, 0.25);
-      text-align: center;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-    .plan-card ul {
-      margin-top: 0.5rem;
-    .product-card:hover {
-      transform: translateY(-7px);
-      box-shadow: 0 12px 22px rgba(242, 140, 140, 0.4);
-    }
-    .product-card img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 15px;
-      margin-bottom: 1rem;
-      box-shadow: 0 4px 8px rgba(90, 62, 54, 0.15);
-      object-fit: cover;
-      aspect-ratio: 4 / 3;
-    }
-    .product-card h3 {
-      margin: 0.5rem 0 0.3rem;
-      font-size: 1.4rem;
-      color: #b94747;
-    }
-    .product-card p {
-      margin: 0 0 1rem;
-      color: #7a5a51;
-      font-size: 1rem;
-      font-style: italic;
-      flex-grow: 1;
-    }
-    .price {
-      font-weight: 700;
-      font-size: 1.2rem;
-      color: #a53d3d;
-      margin-bottom: 0.3rem;
-    }
-    .buy-btn {
-      background: #b94747;
-      color: white;
-      border: none;
-      border-radius: 20px;
-      padding: 0.75rem 0;
-      font-weight: 700;
-      font-size: 1.1rem;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-      width: 100%;
-    }
-    .buy-btn:hover {
-      background-color: #8c3636;
-    }
-
-    /* Contact section */
-    section#contact {
-      background: #fce9e9;
-      padding: 2rem 2.5rem;
-      border-radius: 30px;
-      box-shadow: 0 8px 20px rgba(242, 140, 140, 0.3);
-      max-width: 600px;
-      margin: 0 auto 3rem;
-    }
-    section#contact h2 {
-      color: #b94747;
-      font-family: 'Comic Sans MS', cursive, sans-serif;
-      font-size: 2rem;
-      margin-bottom: 1.5rem;
-      text-align: center;
-    }
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 1.3rem;
-    }
-    label {
-      font-weight: 600;
-      font-size: 1rem;
-      margin-bottom: 0.3rem;
-      color: #7a5a51;
-    }
-    input, textarea {
-      padding: 0.9rem;
-      font-size: 1.05rem;
-      border-radius: 15px;
-      border: 2px solid #f28c8c;
-      resize: none;
-      font-family: inherit;
-      transition: border-color 0.3s ease;
-    }
-    input:focus, textarea:focus {
-      outline: none;
-      border-color: #b94747;
-      background: #fff5f5;
-    }
-    button {
-      background-color: #b94747;
-      color: white;
-      border: none;
-      padding: 1rem;
-      border-radius: 25px;
-      font-size: 1.2rem;
-      font-weight: 700;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-    button:hover {
-      background-color: #8c3636;
-    }
-
-    /* Footer */
-    footer {
-      background: #f28c8c;
-      text-align: center;
-      padding: 1.5rem;
-      color: white;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      font-weight: 600;
-      font-size: 0.95rem;
-      color: #ccc;
-      text-align: left;
-      max-width: 400px;
-      margin-left: auto;
-      margin-right: auto;
-      box-shadow: inset 0 3px 6px rgba(0,0,0,0.15);
-      margin-top: auto;
-    }
-    .plan-card a.button {
-
-    /* Social icons container */
-    .social-icons {
-      margin-top: 1rem;
-      display: inline-block;
-      background-color: #bb86fc;
-      color: #121212;
-      padding: 0.5rem 1.2rem;
-      border-radius: 8px;
-      display: flex;
-      justify-content: center;
-      gap: 1.5rem;
-    }
-    .social-icons a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 1.5rem;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 36px;
-      height: 36px;
-      background: rgba(255,255,255,0.25);
-      border-radius: 50%;
-      transition: background-color 0.3s ease;
-    }
-    .plan-card a.button:hover {
-      background-color: #9a68e6;
-    .social-icons a:hover {
-      background: rgba(255,255,255,0.5);
-    }
-
-    /* Responsive tweaks */
-    @media (max-width: 480px) {
-      header h1 {
-        font-size: 2rem;
-      }
-      nav a {
-        margin: 0 0.5rem;
-        font-size: 1rem;
-      }
-      .products {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-      }
-      section#contact {
-        padding: 1.5rem 1rem;
-        max-width: 90%;
-      }
     }
   </style>
 </head>
 <body>
-
   <header>
     <h1>Zackry Minor</h1>
-    <p>Web Developer | HTML </p>
-    <h1>Cozy Local Store</h1>
-    <p>Your friendly neighborhood shop — fresh, local, and made with love.</p>
-    <nav>
-      <a href="#products">Our Favorites</a>
-      <a href="#contact">Say Hello</a>
-    </nav>
+    <p>Web Developer | HTML</p>
   </header>
 
   <section>
     <h2>Projects</h2>
     <ul>
       <li><a href="cat-photo-app/" target="_blank" rel="noopener noreferrer">🐱 Cat Photo App</a></li>
+      <li><a href="plans/index.html" target="_blank" rel="noopener noreferrer">🌱 Starter Plan Demo</a></li>
+      <li><a href="professional-plan/index.html" target="_blank" rel="noopener noreferrer">🌟 Professional Plan Demo</a></li>
     </ul>
   </section>
-  <main>
 
-  <!-- 💼 Plans Section -->
   <section class="plans">
-    <h2 style="font-size: 2rem; margin-bottom: 1rem;">Web Design Packages</h2>
-    <section class="hero" aria-label="Welcome Banner">
-      <h2>Welcome to Your New Online Store</h2>
-      <p>One simple page to showcase your products and help customers reach you quickly.</p>
-    </section>
+    <h2>Plans</h2>
 
-    <!-- Starter Plan -->
-    <div class="plan-card">
-      <h3>🌱 Starter Plan - $200</h3>
+    <div class="plan">
+      <h3><a href="plans/index.html" target="_blank" rel="noopener noreferrer">Starter Plan - $200</a></h3>
       <p>Perfect for local businesses starting out online.</p>
       <ul>
         <li>✅ 1-page responsive site</li>
@@ -384,38 +123,10 @@
         <li>✅ Basic SEO setup</li>
         <li>✅ 1 revision included</li>
       </ul>
-      <a href="plans/index.html" target="_blank" class="button">View Demo</a>
     </div>
-    <section id="products" aria-label="Product Listings">
-      <h2>Our Favorite Products</h2>
-      <div class="products">
-        <article class="product-card" tabindex="0">
-          <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=320&q=80" alt="Jar of Organic Honey" />
-          <h3>Sweet Organic Honey</h3>
-          <p>Locally sourced and bursting with natural goodness. Perfect on toast or in tea!</p>
-          <div class="price">$12.99</div>
-          <button class="buy-btn" aria-label="Buy Sweet Organic Honey for $12.99">Buy Now</button>
-        </article>
-        <article class="product-card" tabindex="0">
-          <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=320&q=80" alt="Handmade Soap Bar" />
-          <h3>Gentle Handmade Soap</h3>
-          <p>Soft scents and skin-friendly ingredients, perfect for daily use and gifts.</p>
-          <div class="price">$6.50</div>
-          <button class="buy-btn" aria-label="Buy Gentle Handmade Soap for $6.50">Buy Now</button>
-        </article>
-        <article class="product-card" tabindex="0">
-          <img src="https://images.unsplash.com/photo-1511690743698-d9d85f2fbf38?auto=format&fit=crop&w=320&q=80" alt="Freshly Baked Bread" />
-          <h3>Warm Fresh Bread</h3>
-          <p>Baked with love daily, straight from our oven to your table. Enjoy the aroma!</p>
-          <div class="price">$4.75</div>
-          <button class="buy-btn" aria-label="Buy Warm Fresh Bread for $4.75">Buy Now</button>
-        </article>
-      </div>
-    </section>
 
-    <!-- Professional Plan -->
-    <div class="plan-card">
-      <h3>🌟 Professional Plan - $450</h3>
+    <div class="plan">
+      <h3><a href="professional-plan/index.html" target="_blank" rel="noopener noreferrer">Professional Plan - $450</a></h3>
       <p>Great for service-based businesses that need more pages.</p>
       <ul>
         <li>✅ Up to 5 pages</li>
@@ -423,27 +134,10 @@
         <li>✅ Mobile responsive</li>
         <li>✅ 2 revisions included</li>
       </ul>
-      <a href="#" target="_blank" class="button">Coming Soon</a>
     </div>
-    <section id="contact" aria-label="Contact Form">
-      <h2>Say Hello!</h2>
-      <form>
-        <label for="name">Your Name</label>
-        <input id="name" type="text" placeholder="Enter your name" required />
-        
-        <label for="email">Your Email</label>
-        <input id="email" type="email" placeholder="Enter your email" required />
-        
-        <label for="message">Your Message</label>
-        <textarea id="message" rows="5" placeholder="Write your message here..."></textarea>
-        
-        <button type="submit">Send Message</button>
-      </form>
-    </section>
 
-    <!-- Business Plan -->
-    <div class="plan-card">
-      <h3>🚀 Business Pro - $800+</h3>
+    <div class="plan">
+      <h3><a href="business-plan/index.html" target="_blank" rel="noopener noreferrer">Business Pro - $800+</a></h3>
       <p>Best for advanced features, blogs, or custom branding.</p>
       <ul>
         <li>✅ Up to 10 pages</li>
@@ -451,26 +145,11 @@
         <li>✅ Newsletter or lead form</li>
         <li>✅ 3 revisions included</li>
       </ul>
-      <a href="#" target="_blank" class="button">Coming Soon</a>
     </div>
   </section>
-  </main>
 
   <footer>
     <p>© 2025 Zackry Minor</p>
-    &copy; 2025 Cozy Local Store. All rights reserved.
-    <div class="social-icons" role="navigation" aria-label="Social media links">
-      <a href="#" aria-label="Facebook">
-        <svg fill="currentColor" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M22 12a10 10 0 10-11.5 9.85v-6.96h-2.42v-2.9h2.42v-2.22c0-2.4 1.43-3.73 3.63-3.73 1.05 0 2.15.18 2.15.18v2.37h-1.21c-1.2 0-1.57.74-1.57 1.5v1.9h2.67l-.43 2.9h-2.24v6.96A10 10 0 0022 12z"/></svg>
-      </a>
-      <a href="#" aria-label="Twitter">
-        <svg fill="currentColor" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M23 3a10.9 10.9 0 01-3.14.85 5.48 5.48 0 002.4-3.03 10.97 10.97 0 01-3.47 1.33 5.47 5.47 0 00-9.32 4.99A15.54 15.54 0 013 4.84a5.46 5.46 0 001.69 7.29 5.36 5.36 0 01-2.48-.69v.07a5.47 5.47 0 004.39 5.37 5.48 5.48 0 01-2.46.09 5.47 5.47 0 005.1 3.8A10.97 10.97 0 013 19.54a15.45 15.45 0 008.39 2.46c10.06 0 15.57-8.34 15.57-15.57 0-.24 0-.48-.02-.72A11.04 11.04 0 0023 3z"/></svg>
-      </a>
-      <a href="#" aria-label="Instagram">
-        <svg fill="currentColor" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 2A3.75 3.75 0 004 7.75v8.5A3.75 3.75 0 007.75 20h8.5a3.75 3.75 0 003.75-3.75v-8.5A3.75 3.75 0 0016.25 4h-8.5zM12 7a5 5 0 110 10 5 5 0 010-10zm0 2a3 3 0 100 6 3 3 0 000-6zm4.75-3.5a1.25 1.25 0 110 2.5 1.25 1.25 0 010-2.5z"/></svg>
-      </a>
-    </div>
   </footer>
-
 </body>
 </html>
