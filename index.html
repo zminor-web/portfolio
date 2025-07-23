@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <title>Zackry Minor | Portfolio</title>
   <style>
-    /* Dark theme background and text */
     body {
       background-color: #121212;
       color: #e0e0e0;
@@ -50,6 +49,42 @@
       font-size: 0.9rem;
       color: #888;
     }
+
+    /* Plans Section Styles */
+    .plans {
+      max-width: 1000px;
+      margin: 3rem auto;
+    }
+    .plan-card {
+      background-color: #1e1e1e;
+      padding: 1.5rem;
+      border-radius: 12px;
+      border: 1px solid #333;
+      margin-bottom: 2rem;
+    }
+    .plan-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+      color: #bb86fc;
+    }
+    .plan-card ul {
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #ccc;
+    }
+    .plan-card a.button {
+      margin-top: 1rem;
+      display: inline-block;
+      background-color: #bb86fc;
+      color: #121212;
+      padding: 0.5rem 1.2rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .plan-card a.button:hover {
+      background-color: #9a68e6;
+    }
   </style>
 </head>
 <body>
@@ -62,8 +97,51 @@
     <h2>Projects</h2>
     <ul>
       <li><a href="cat-photo-app/" target="_blank" rel="noopener noreferrer">🐱 Cat Photo App</a></li>
-      <!-- Add more projects here -->
     </ul>
+  </section>
+
+  <!-- 💼 Plans Section -->
+  <section class="plans">
+    <h2 style="font-size: 2rem; margin-bottom: 1rem;">Web Design Packages</h2>
+
+    <!-- Starter Plan -->
+    <div class="plan-card">
+      <h3>🌱 Starter Plan - $200</h3>
+      <p>Perfect for local businesses starting out online.</p>
+      <ul>
+        <li>✅ 1-page responsive site</li>
+        <li>✅ Contact form or Google Map</li>
+        <li>✅ Basic SEO setup</li>
+        <li>✅ 1 revision included</li>
+      </ul>
+      <a href="https://your-starter-demo.netlify.app" target="_blank" class="button">View Demo</a>
+    </div>
+
+    <!-- Professional Plan -->
+    <div class="plan-card">
+      <h3>🌟 Professional Plan - $450</h3>
+      <p>Great for service-based businesses that need more pages.</p>
+      <ul>
+        <li>✅ Up to 5 pages</li>
+        <li>✅ Contact form + Google Map</li>
+        <li>✅ Mobile responsive</li>
+        <li>✅ 2 revisions included</li>
+      </ul>
+      <a href="#" target="_blank" class="button">Coming Soon</a>
+    </div>
+
+    <!-- Business Plan -->
+    <div class="plan-card">
+      <h3>🚀 Business Pro - $800+</h3>
+      <p>Best for advanced features, blogs, or custom branding.</p>
+      <ul>
+        <li>✅ Up to 10 pages</li>
+        <li>✅ Blog or CMS layout</li>
+        <li>✅ Newsletter or lead form</li>
+        <li>✅ 3 revisions included</li>
+      </ul>
+      <a href="#" target="_blank" class="button">Coming Soon</a>
+    </div>
   </section>
 
   <footer>
@@ -71,3 +149,4 @@
   </footer>
 </body>
 </html>
+
