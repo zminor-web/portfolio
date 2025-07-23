@@ -5,7 +5,82 @@
   <title>Business Pro Plan | Zackry Minor</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
-    /* Your existing styles here (omitted for brevity) */
+    :root {
+      --primary: #ff9800;
+      --background: #0d1117;
+      --card: #161b22;
+      --text: #e6edf3;
+      --muted: #8b949e;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--background);
+      color: var(--text);
+      line-height: 1.5;
+    }
+
+    header {
+      background-color: var(--card);
+      padding: 2rem;
+      text-align: center;
+      border-bottom: 1px solid #333;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      color: var(--primary);
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 1rem;
+      background-color: #1f242b;
+      gap: 1rem;
+    }
+
+    nav a {
+      color: var(--text);
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+      padding: 0.3rem 0.6rem;
+      border-radius: 4px;
+    }
+
+    nav a:hover {
+      color: var(--primary);
+    }
+
+    nav a[aria-current="page"] {
+      color: var(--primary);
+      font-weight: bold;
+      cursor: default;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 4rem 2rem;
+      background-color: #12181f;
+    }
+
+    .hero h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: var(--muted);
+      padding: 1rem;
+      background-color: #1f242b;
+      margin-top: 3rem;
+    }
   </style>
 </head>
 <body>
@@ -25,8 +100,7 @@
     <a href="#">Contact</a>
     <a href="#">Subscribe</a>
     <a href="#">Support</a>
-    <!-- The Business Pro Plan link points to itself, so make it plain text or # -->
-    <a href="#" aria-current="page" style="color: var(--primary); font-weight: bold;">
+    <a href="#" aria-current="page">
       🌟 Business Pro Plan
     </a>
   </nav>
@@ -35,8 +109,6 @@
     <h2>Why Go Business Pro?</h2>
     <p>This plan gives you everything: more pages, more flexibility, and custom design options to elevate your brand.</p>
   </section>
-
-  <!-- Rest of your content -->
 
   <div class="footer">
     © 2025 Zackry Minor. All rights reserved.
