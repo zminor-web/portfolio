@@ -1,227 +1,220 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Professional Plan | Zackry Minor</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Zackry Minor | Portfolio</title>
   <style>
-    /* Base styles similar to your Starter Plan, but upgraded */
     body {
       background-color: #121212;
       color: #e0e0e0;
       font-family: Arial, sans-serif;
+      padding: 20px;
+      line-height: 1.6;
       margin: 0;
-      padding: 2rem 1rem;
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
+      justify-content: center;
       align-items: center;
-      min-height: 100vh;
       text-align: center;
-      line-height: 1.5;
     }
-
-    h1 {
-      color: #bb86fc;
-      font-size: 2.8rem;
-      margin-bottom: 0.25rem;
-      font-weight: 700;
-      letter-spacing: 0.05em;
-    }
-
-    h2 {
-      color: #ccc;
-      font-weight: 400;
-      margin-top: 0;
+    header, footer {
+      text-align: center;
       margin-bottom: 2rem;
-      font-size: 1.2rem;
-      max-width: 600px;
     }
-
-    .price {
-      font-size: 3.5rem;
-      font-weight: 900;
+    a {
       color: #bb86fc;
-      margin: 0 0 2rem 0;
-      letter-spacing: 0.1em;
-      text-shadow: 0 0 10px #bb86fc88;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.2rem;
+      transition: color 0.3s ease;
+      display: inline-block;
+      margin: 0.5rem 0;
     }
-
-    .features {
+    a:hover,
+    a:focus {
+      color: #3700b3;
+      outline: none;
+      text-decoration: underline;
+    }
+    ul {
       list-style: none;
       padding: 0;
-      margin: 0 auto 3rem auto;
-      max-width: 600px;
+      margin: 0;
+    }
+    li {
+      margin: 1rem 0;
+    }
+    .plans {
+      margin-top: 3rem;
+      max-width: 700px;
+      width: 100%;
+      background-color: #1e1e1e;
+      padding: 25px 30px;
+      border-radius: 10px;
       text-align: left;
-      font-size: 1.15rem;
-      color: #d0cde1;
+      box-shadow: 0 0 15px #bb86fc44;
     }
-
-    .features li {
-      margin-bottom: 1rem;
-      padding-left: 2rem;
-      position: relative;
+    .plan {
+      border: 1px solid #444;
+      border-radius: 8px;
+      padding: 25px 30px;
+      margin-bottom: 2rem;
+      background-color: #272727;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .plan:hover,
+    .plan:focus-within {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px #bb86fc99;
+      border-color: #bb86fc;
+      outline: none;
+    }
+    .plan h3 {
+      margin-top: 0;
+      color: #bb86fc;
+      font-size: 1.6rem;
+      letter-spacing: 0.03em;
+    }
+    .plan h3 a {
+      color: inherit;
+      text-decoration: none;
+    }
+    .plan h3 a:hover,
+    .plan h3 a:focus {
+      color: #3700b3;
+      text-decoration: underline;
+    }
+    .plan p {
+      margin: 0.5rem 0 1.2rem;
       font-weight: 600;
+      font-size: 1.15rem;
+      color: #ccc;
+      font-style: italic;
     }
-
-    .features li::before {
-      content: "✓";
+    .plan ul {
+      list-style: none;
+      padding-left: 1.2rem;
+      margin: 0;
+      color: #a9a9a9;
+      font-size: 1.1rem;
+    }
+    .plan ul li {
+      margin-bottom: 0.6rem;
+      position: relative;
+      padding-left: 1.8rem;
+    }
+    .plan ul li::before {
+      content: "✅";
       position: absolute;
       left: 0;
       color: #bb86fc;
-      font-weight: 900;
-      font-size: 1.2rem;
-      line-height: 1;
-    }
-
-    /* Form Styling: bigger, cleaner, modern */
-    form {
-      background: #1f1b2e;
-      border-radius: 12px;
-      padding: 2rem;
-      max-width: 600px;
-      width: 100%;
-      box-shadow: 0 0 20px #bb86fcaa;
-      text-align: left;
-      margin-bottom: 3rem;
-    }
-
-    label {
-      color: #cfc9e5;
-      font-weight: 600;
-      display: block;
-      margin-bottom: 0.6rem;
-      font-size: 1.05rem;
-    }
-
-    input, textarea {
-      width: 100%;
-      padding: 12px 15px;
-      margin-bottom: 1.25rem;
-      border-radius: 8px;
-      border: none;
-      font-size: 1.05rem;
-      background-color: #302b43;
-      color: #e0dff4;
-      resize: vertical;
-      transition: background-color 0.3s ease;
-    }
-
-    input:focus, textarea:focus {
-      background-color: #3a3550;
-      outline: none;
-      box-shadow: 0 0 10px #bb86fccc;
-    }
-
-    button {
-      background-color: #bb86fc;
-      color: #1b122e;
-      font-weight: 700;
-      padding: 15px 30px;
-      font-size: 1.15rem;
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-      box-shadow: 0 4px 10px #bb86fc99;
-      width: 100%;
-      max-width: 200px;
-      margin-top: 0.5rem;
-      display: block;
-    }
-
-    button:hover, button:focus {
-      background-color: #7a46cc;
-      color: #f5f1ff;
-      outline: none;
-      box-shadow: 0 0 20px #7a46cccc;
-    }
-
-    /* Map container: polished with shadow and rounded corners */
-    .map-container {
-      max-width: 600px;
-      width: 100%;
-      height: 350px;
-      border-radius: 16px;
-      overflow: hidden;
-      margin-bottom: 3rem;
-      box-shadow: 0 0 25px #bb86fcaa;
-      border: 2px solid #bb86fc77;
-    }
-
-    /* Back to portfolio link */
-    .back-link {
-      font-weight: 700;
-      color: #bb86fc;
-      text-decoration: none;
       font-size: 1.1rem;
-      margin-bottom: 2rem;
-      transition: color 0.3s ease;
+      top: 2px;
     }
 
-    .back-link:hover, .back-link:focus {
-      color: #7a46cc;
-      text-decoration: underline;
-      outline: none;
+    /* Make Professional Plan visually stand out */
+    .professional {
+      background: linear-gradient(135deg, #3a2a6a, #5d3ed6);
+      border-color: #bb86fc;
+      box-shadow: 0 8px 30px #bb86fcaa;
+    }
+    .professional:hover,
+    .professional:focus-within {
+      transform: translateY(-8px) scale(1.03);
+      box-shadow: 0 12px 40px #bb86fcdd;
+    }
+    .professional h3 {
+      font-weight: 700;
+      text-shadow: 0 0 8px #e0d7ffbb;
+    }
+    .professional ul li::before {
+      content: "🚀";
+      color: #fff;
+      font-size: 1.2rem;
+      top: 3px;
     }
 
-    /* Responsive tweaks */
+    footer {
+      margin-top: auto;
+      font-size: 0.9rem;
+      color: #888;
+    }
+
     @media (max-width: 640px) {
-      body {
-        padding: 1rem;
+      .plans {
+        padding: 20px;
       }
-      h1 {
-        font-size: 2.3rem;
+      .plan {
+        padding: 20px;
+        margin-bottom: 1.5rem;
       }
-      .price {
-        font-size: 2.8rem;
+      .plan h3 {
+        font-size: 1.4rem;
       }
-      form {
-        padding: 1.5rem;
+      .plan p {
+        font-size: 1rem;
       }
-      .map-container {
-        height: 250px;
+      .plan ul {
+        font-size: 1rem;
       }
     }
   </style>
 </head>
 <body>
-  <h1>Professional Plan</h1>
-  <h2>Upgrade your business with a multi-page, feature-rich website</h2>
-  <div class="price">$450</div>
+  <header>
+    <h1>Zackry Minor</h1>
+    <p>Web Developer | HTML</p>
+  </header>
 
-  <ul class="features" aria-label="Professional Plan Features">
-    <li>Up to 5 pages for showcasing services, team, and portfolio</li>
-    <li>Integrated contact form <strong>plus</strong> Google Map</li>
-    <li>Mobile responsive design ensuring a smooth experience on any device</li>
-    <li>2 revisions included for perfecting your site</li>
-  </ul>
+  <section>
+    <h2>Projects</h2>
+    <ul>
+      <li><a href="cat-photo-app/" target="_blank" rel="noopener noreferrer">🐱 Cat Photo App</a></li>
+      <li><a href="plans/index.html" target="_blank" rel="noopener noreferrer">🌱 Starter Plan Demo</a></li>
+      <li><a href="plans-2/index.html" target="_blank" rel="noopener noreferrer">🌟 Professional Plan Demo</a></li>
+    </ul>
+  </section>
 
-  <form action="#" method="post" aria-label="Contact form for Professional Plan demo">
-    <label for="name">Name</label>
-    <input id="name" name="name" type="text" placeholder="Your full name" required />
+  <section class="plans" aria-label="Web Design Plans">
+    <h2>Plans</h2>
 
-    <label for="email">Email</label>
-    <input id="email" name="email" type="email" placeholder="you@example.com" required />
+    <div class="plan">
+      <h3><a href="plans/index.html" target="_blank" rel="noopener noreferrer">Starter Plan - $200</a></h3>
+      <p>Perfect for local businesses starting out online.</p>
+      <ul>
+        <li>1-page responsive site</li>
+        <li>Contact form or Google Map</li>
+        <li>Basic SEO setup</li>
+        <li>1 revision included</li>
+      </ul>
+    </div>
 
-    <label for="message">Message</label>
-    <textarea id="message" name="message" rows="5" placeholder="Tell us about your project..." required></textarea>
+    <div class="plan professional" tabindex="0">
+      <h3><a href="plans-2/index.html" target="_blank" rel="noopener noreferrer">Professional Plan - $450</a></h3>
+      <p>Great for service-based businesses that need more pages and advanced features.</p>
+      <ul>
+        <li>Up to 5 pages</li>
+        <li>Contact form <strong>plus</strong> Google Map</li>
+        <li>Mobile responsive design</li>
+        <li>2 revisions included</li>
+      </ul>
+    </div>
 
-    <button type="submit">Send Message</button>
-  </form>
+    <div class="plan">
+      <h3><a href="business-plan/index.html" target="_blank" rel="noopener noreferrer">Business Pro - $800+</a></h3>
+      <p>Best for advanced features, blogs, or custom branding.</p>
+      <ul>
+        <li>Up to 10 pages</li>
+        <li>Blog or CMS layout</li>
+        <li>Newsletter or lead form</li>
+        <li>3 revisions included</li>
+      </ul>
+    </div>
+  </section>
 
-  <div class="map-container" aria-label="Google Map showing business location">
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.019572405193!2d-122.419415084681!3d37.77492977975956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085809c5b4b373d%3A0xa29c8a66621f8580!2sSan%20Francisco%2C%20CA!5e0!3m2!1sen!2sus!4v1690144201234!5m2!1sen!2sus"
-      width="100%"
-      height="100%"
-      style="border:0;"
-      allowfullscreen=""
-      loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade"
-      title="Google Map showing example business location"
-    ></iframe>
-  </div>
-
-  <a class="back-link" href="../" aria-label="Back to portfolio page">&larr; Back to Portfolio</a>
+  <footer>
+    <p>© 2025 Zackry Minor</p>
+  </footer>
 </body>
 </html>
