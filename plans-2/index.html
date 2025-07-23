@@ -2,164 +2,195 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Professional Plan Demo | Zackry Minor</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Professional Plan | Zackry Minor</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
+    /* Reset and base */
     body {
       background-color: #121212;
       color: #e0e0e0;
       font-family: Arial, sans-serif;
       margin: 0;
-    }
-    header {
-      background-color: #1e1e1e;
-      padding: 1rem 2rem;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-      color: #bb86fc;
-    }
-    nav {
-      background-color: #2b2b2b;
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      padding: 0.8rem;
-    }
-    nav a {
-      color: #bb86fc;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    nav a:hover {
-      color: #fff;
-    }
-    .section {
-      padding: 2rem;
-      max-width: 1000px;
-      margin: auto;
-    }
-    .products {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
-    }
-    .product {
-      background-color: #1e1e1e;
-      padding: 1rem;
-      border-radius: 12px;
-      border: 1px solid #333;
-      text-align: center;
-    }
-    .product img {
-      max-width: 100%;
-      border-radius: 8px;
-    }
-    .product h3 {
-      margin-top: 0.8rem;
-      color: #bb86fc;
-    }
-    footer {
-      background-color: #1e1e1e;
-      text-align: center;
-      padding: 1rem;
-      color: #888;
-      margin-top: 2rem;
-    }
-    form {
+      padding: 2rem 1rem;
       display: flex;
       flex-direction: column;
-      gap: 1rem;
-      max-width: 500px;
-      margin: auto;
+      align-items: center;
+      min-height: 100vh;
+      text-align: center;
+    }
+    h1, h2 {
+      color: #bb86fc;
+      margin-bottom: 0.5rem;
+    }
+    h3 {
+      margin-top: 0;
+      color: #bb86fc;
+    }
+    p {
+      max-width: 600px;
+      margin: 0 auto 1.5rem;
+      font-size: 1.1rem;
+      line-height: 1.5;
+      color: #ccc;
+    }
+    .price {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #bb86fc;
+      margin-bottom: 1rem;
+    }
+    ul.features {
+      list-style: none;
+      padding: 0;
+      max-width: 600px;
+      margin: 0 auto 2rem;
+      text-align: left;
+      color: #a9a9a9;
+    }
+    ul.features li {
+      margin-bottom: 0.8rem;
+      font-size: 1.1rem;
+      padding-left: 1.5rem;
+      position: relative;
+    }
+    ul.features li::before {
+      content: "✅";
+      position: absolute;
+      left: 0;
+      color: #bb86fc;
+    }
+    /* Contact form styling */
+    form {
+      background-color: #272727;
+      padding: 20px;
+      border-radius: 8px;
+      max-width: 600px;
+      width: 100%;
+      text-align: left;
+      margin-bottom: 2rem;
+      box-shadow: 0 0 10px #bb86fc50;
+    }
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: bold;
+      color: #ccc;
     }
     input, textarea {
-      padding: 0.7rem;
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
       border: none;
-      border-radius: 8px;
-      background: #2a2a2a;
-      color: #fff;
+      border-radius: 4px;
+      font-size: 1rem;
+      background-color: #1e1e1e;
+      color: #e0e0e0;
+      resize: vertical;
+    }
+    input:focus, textarea:focus {
+      outline: 2px solid #bb86fc;
+      background-color: #292929;
     }
     button {
       background-color: #bb86fc;
       border: none;
-      padding: 0.7rem;
-      border-radius: 8px;
-      font-weight: bold;
-      cursor: pointer;
+      padding: 12px 25px;
+      font-size: 1.1rem;
       color: #121212;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
     }
-    button:hover {
-      background-color: #9a68e6;
+    button:hover, button:focus {
+      background-color: #3700b3;
+      color: #fff;
+      outline: none;
     }
-    iframe {
+    /* Google map container */
+    .map-container {
+      max-width: 600px;
       width: 100%;
-      border: none;
       height: 300px;
-      border-radius: 12px;
-      margin-top: 1rem;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 0 12px #bb86fc80;
+      margin-bottom: 2rem;
+    }
+    /* Back link */
+    .back-link {
+      color: #bb86fc;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 1.1rem;
+      margin-top: auto;
+    }
+    .back-link:hover,
+    .back-link:focus {
+      color: #3700b3;
+      text-decoration: underline;
+      outline: none;
+    }
+
+    /* Responsive */
+    @media (max-width: 640px) {
+      body {
+        padding: 1rem;
+      }
+      ul.features {
+        font-size: 1rem;
+      }
+      .price {
+        font-size: 2rem;
+      }
+      form {
+        padding: 15px;
+      }
+      .map-container {
+        height: 200px;
+      }
     }
   </style>
 </head>
 <body>
+  <h1>Professional Plan</h1>
+  <div class="price">$450</div>
+  <p>Perfect for service-based businesses that need a polished, multi-page website with essential features and mobile responsiveness. This plan is designed to take your online presence to the next level.</p>
 
-  <header>
-    <h1>🌟 Professional Store Demo</h1>
-    <p>See what your store could look like with the Professional Plan</p>
-  </header>
+  <ul class="features">
+    <li>Up to 5 pages</li>
+    <li>Contact form + Google Map integration</li>
+    <li>Mobile responsive design</li>
+    <li>2 revisions included</li>
+  </ul>
 
-  <nav>
-    <a href="#products">Products</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
-  </nav>
+  <form action="#" method="post" aria-label="Contact form for Professional Plan demo">
+    <h2>Request a Quote or Ask a Question</h2>
+    <label for="name">Name</label>
+    <input id="name" name="name" type="text" placeholder="Your full name" required />
 
-  <section id="products" class="section">
-    <h2 style="text-align:center;">Featured Products</h2>
-    <div class="products">
-      <div class="product">
-        <img src="https://images.unsplash.com/photo-1652233172336-6efc037a3766?q=80&w=1170&auto=format&fit=crop" alt="Soap Bar">
-        <h3>Natural Soap</h3>
-        <p>Handcrafted and organic. Gentle on skin.</p>
-      </div>
-      <div class="product">
-        <img src="https://plus.unsplash.com/premium_photo-1723478487400-273b4dde66d4?q=80&w=738&auto=format&fit=crop" alt="Honey Jar">
-        <h3>Organic Honey</h3>
-        <p>Locally sourced and 100% raw.</p>
-      </div>
-      <div class="product">
-        <img src="https://plus.unsplash.com/premium_photo-1664640733898-d5c3f71f44e1?q=80&w=687&auto=format&fit=crop" alt="Fresh Bread">
-        <h3>Fresh Bread</h3>
-        <p>Baked daily for unbeatable freshness.</p>
-      </div>
-    </div>
-  </section>
+    <label for="email">Email</label>
+    <input id="email" name="email" type="email" placeholder="you@example.com" required />
 
-  <section id="about" class="section">
-    <h2>About This Store</h2>
-    <p style="text-align: center;">This demo shows the layout for a Professional Plan — complete with multiple sections, contact form, and integrated map. Perfect for growing businesses that want to offer more content and a better customer experience.</p>
-  </section>
+    <label for="message">Message</label>
+    <textarea id="message" name="message" rows="4" placeholder="Tell us about your project..." required></textarea>
 
-  <section id="contact" class="section">
-    <h2>Contact Us</h2>
-    <form>
-      <input type="text" placeholder="Your Name" required />
-      <input type="email" placeholder="Your Email" required />
-      <textarea rows="4" placeholder="Your Message"></textarea>
-      <button type="submit">Send Message</button>
-    </form>
+    <button type="submit">Send Message</button>
+  </form>
+
+  <div class="map-container" aria-label="Google Map location example">
     <iframe
-      src="https://maps.google.com/maps?q=Kissimmee,%20FL&t=&z=13&ie=UTF8&iwloc=&output=embed"
-      allowfullscreen
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.019572405193!2d-122.419415084681!3d37.77492977975956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085809c5b4b373d%3A0xa29c8a66621f8580!2sSan%20Francisco%2C%20CA!5e0!3m2!1sen!2sus!4v1690144201234!5m2!1sen!2sus"
+      width="100%"
+      height="100%"
+      style="border:0;"
+      allowfullscreen=""
       loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      title="Google Map showing example business location"
     ></iframe>
-  </section>
+  </div>
 
-  <footer>
-    <p>© 2025 Zackry Minor | Professional Plan Demo</p>
-  </footer>
-
+  <a class="back-link" href="../" aria-label="Back to portfolio page">&larr; Back to Portfolio</a>
 </body>
 </html>
-
